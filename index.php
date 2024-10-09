@@ -1,14 +1,25 @@
 <?php
 
-// Fase di preparazione
+// Class
+class Movie {
+    public string $title;
+    public string $director;
+    public int $year;
 
-// Variabili
-// Strutture dati
-// Funzioni
+    public function __construct(string $title, string $director, int $year) {
+        $this->title = $title;
+        $this->director = $director;
+        $this->year = $year;
+    }
 
-// Fase di raccolta dati
-// Fase di elaborazione
-// Fase di produzione
+    public function get_title() : string {
+        return $this->title;
+    }
+}
+
+// Instances
+$first_movie = new Movie('Non aprite quella porta', 'Marcus Nispel', 2003);
+$second_movie = new Movie('Non aprite quella porta - L\'inizio', 'Jonathan Liebesman', 2006);
 
 ?>
 
@@ -34,7 +45,21 @@
         <h1 class="text-center">PHP OOP</h1>
     </header>
     <!-- Main -->
-    <main></main>
+    <main>
+        <div class="container-fluid mb-3">
+            <div><?= $first_movie->get_title() ?></div>
+            <div><?= $second_movie->get_title() ?></div>
+        </div>
+    </main>
 </body>
 
 </html>
+
+<?php
+
+// Fase di produzione
+
+var_dump($first_movie);
+var_dump($second_movie);
+
+?>
