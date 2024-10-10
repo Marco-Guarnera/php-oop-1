@@ -6,8 +6,8 @@ require_once __DIR__ . '/classes/Movie.php';
 
 $horror = new Genre('Horror');
 
-$first_movie = new Movie('Non aprite quella porta', 'Marcus Nispel', 2003, $horror);
-$second_movie = new Movie('Non aprite quella porta - L\'inizio', 'Jonathan Liebesman', 2006, new Genre('Horror'));
+$first_movie = new Movie('Non aprite quella porta', 'Marcus Nispel', 2003, [$horror]);
+$second_movie = new Movie('Non aprite quella porta - L\'inizio', 'Jonathan Liebesman', 2006, [new Genre('Horror')]);
 
 // Struttura dati
 $movies_list = [$first_movie, $second_movie];
